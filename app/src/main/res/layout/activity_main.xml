@@ -9,15 +9,14 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
+        android:theme="@style/Theme.Toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
-        android:theme="@style/Theme.AppCompat.DayNight"
         app:contentInsetStart="0dp"
         app:contentInsetStartWithNavigation="0dp"
         app:title="Contactos" />
-    <!--android:theme="@style/Theme.Toolbar"-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_view_contacts"
