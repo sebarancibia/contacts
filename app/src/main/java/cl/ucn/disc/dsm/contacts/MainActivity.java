@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tv_phonebook;
     //to store the phonebook
-    ArrayList<Contact> arrayList;
+    private List<Contact> arrayList= new ArrayList<>();
 
 
 
@@ -64,11 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         tv_phonebook=findViewById(R.id.txt_contact_name);
-        //to initialize the memory to arraylist
-        arrayList= new ArrayList<Contact>();
-        //give runtime permission for read contact
 
-        //list_view_contacts = findViewById(R.id.list_view_contacts);
+
+
+
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_CONTACTS)
                 == PackageManager.PERMISSION_GRANTED) {
@@ -142,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         //initialize adapter
-        adapter = new MainAdapter(this,arrayList);
+        adapter = new MainAdapter(this, (ArrayList<Contact>) arrayList);
         //set adapter
         recyclerView.setAdapter(adapter);
     }
